@@ -55,26 +55,22 @@ header a{
 
 .top-section{
     display: flex;
-    height: 430px;
     background-image: url(../images/Circle\ design.svg);
     background-repeat: no-repeat;
-    background-size: 27%;
-    background-position-x: 94.5%;
+    background-size: 24%;
+    background-position-x: 91%;
     align-items: center;
     
 }
 
-.half-width{
-    width: 50%;
-}
 
-.half-width h1{
+.top-section h1{
     font-size: 52px;
     font-weight: 700;
     margin: 0;
 }
 
-.half-width p{
+.top-section p{
     padding-right: 20%;
     text-align: justify;
     margin-bottom: 36px;
@@ -103,6 +99,7 @@ header a{
 /* Ecomerce section */
 
 #ecommerce-section{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -216,11 +213,11 @@ header a{
     margin-bottom: 200px;
 
 }
-
+/* 
 .featured img{
-    width: 60%;
+    width: 100%;
     padding: 0px 85px;
-}
+} */
 
 #featured-heading{
     margin-top: 0;
@@ -231,7 +228,17 @@ header a{
     color: #0A0826;
 }
 
+.featured-description{
+    padding-left: 200px;
+}
 
+.featured img{
+    margin-left: 20px;
+}
+
+.featured p{
+    margin-bottom: 36px;
+}
 /* Footer */
 
 footer{
@@ -270,4 +277,136 @@ footer h3{
 .social-footer:hover{
     transform: scale(1.3);
     cursor: pointer;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width:600px) {
+
+    .container{
+        margin: 15px;
+    }
+    
+    .nav-button{
+        display: none;
+    }
+
+
+    header h2{
+        font-size: 16px;
+    }
+
+    .top-section{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        flex-direction: row;
+        align-items:normal;
+        flex-wrap: wrap;
+        background-size:0;
+    }
+
+    .top-section img{
+        margin-top: 50px;
+        width: 80%;
+    }
+
+    .top-section h1{
+        font-size: 28px;
+    }
+
+    .top-section p{
+        font-size: 14px;
+        padding: 0%;
+        margin-right: 20px;
+    }
+
+    
+    .top-section img{
+        display: none;
+    }
+
+    #ecommerce-section{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    #ecommerce-section img{
+        padding: 3%;
+        /* margin-right: 20px; */
+    }
+
+    .item{
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 20px;
+        row-gap: 20px;
+    }
+
+    .p-collection h3{
+        font-size: 18px;
+    }
+
+    .items h2{
+        font-size: 24px;
+    }
+    .shifting{
+        font-size: 16px;
+    }
+
+    #see-more{
+        font-size: 16px;
+        margin-right: 2px;
+    }
+
+    .featured{
+        flex-direction: column;
+    }
+
+    .featured img{
+        width: 85%;
+    }
+
+    .featured-description{
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #featured-heading{
+        font-size: 20px;
+    }
+
+    .featured-description p{
+        font-size: 14px;
+        text-align: justify;
+
+    }
+
+    #featured-heading{
+        text-align: center;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer{
+        margin-top: 40px;
+    }
+    footer h3{
+        font-size: 24px;
+    }
+    footer p{
+        font-size: 14px;
+    }
+
+    .social-footer{
+        font-size: 24px;
+    }
+
+    .items{
+        width: 80%;
+    }
 }
